@@ -20,7 +20,7 @@ public class SecretsOfTheSea {
         
         Player playerOne = new Player();
         
-        playerOne.setName("Fred");
+        playerOne.setName("Abby");
         playerOne.setBestTime(7.00);
         
         String playerInfo = playerOne.toString();
