@@ -5,6 +5,7 @@
  */
 package secretsofthesea;
 
+import byu.cit260.secretsOfTheSea.model.Actor;
 import byu.cit260.secretsOfTheSea.model.Player;
 import byu.cit260.secretsOfTheSea.model.Artifacts;
 import byu.cit260.secretsOfTheSea.model.Clipper;
@@ -25,6 +26,7 @@ import byu.cit260.secretsOfTheSea.model.Submersible;
 import byu.cit260.secretsOfTheSea.model.TimeClock;
 import byu.cit260.secretsOfTheSea.model.TreasureItems;
 import byu.cit260.secretsOfTheSea.model.Water;
+import byu.cit260.secretsOfTheSea.model.Actor;
 
 /**
  *
@@ -57,6 +59,7 @@ public class SecretsOfTheSea {
         TimeClock timeClockOne = new TimeClock();
         TreasureItems treasureItemsOne = new TreasureItems();
         Water waterOne = new Water();
+        Actor actorOne = new Actor();
         
         playerOne.setName("Abby");
         playerOne.setBestTime(7.00);
@@ -152,6 +155,14 @@ public class SecretsOfTheSea {
         munitionsOne.setContainerSize(1.00);
         munitionsOne.setAmmoQtyPerContainer(25.00);
         munitionsOne.setContainerWeight(40.00);
+        
+        actorOne.setName("Bill Nye");
+        actorOne.setDescription("male");
+        actorOne.setCoordinates(14.00);
+        
+        
+            
+        
 
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
@@ -212,6 +223,10 @@ public class SecretsOfTheSea {
  
         String munitionsInfo = munitionsOne.toString();
         System.out.println(munitionsInfo);
+        
+        String actorInfo = actorOne.toString();
+        System.out.println(actorInfo);
+        
     }
     
 }
