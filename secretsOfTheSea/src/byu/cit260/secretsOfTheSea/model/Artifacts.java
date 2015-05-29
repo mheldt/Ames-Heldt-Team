@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ ** Test comment
  * @author MarkH
  */
 public class Artifacts implements Serializable{

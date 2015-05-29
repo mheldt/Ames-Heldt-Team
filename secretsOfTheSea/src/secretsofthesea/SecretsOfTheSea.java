@@ -27,6 +27,14 @@ import byu.cit260.secretsOfTheSea.model.TimeClock;
 import byu.cit260.secretsOfTheSea.model.TreasureItems;
 import byu.cit260.secretsOfTheSea.model.Water;
 import byu.cit260.secretsOfTheSea.model.Actor;
+import byu.cit260.secretsOfTheSea.model.Game;
+import byu.cit260.secretsOfTheSea.model.LocationOfScene;
+import byu.cit260.secretsOfTheSea.model.Map;
+import byu.cit260.secretsOfTheSea.model.RegularTypeScene;
+import byu.cit260.secretsOfTheSea.model.ResourceTypeScene;
+import byu.cit260.secretsOfTheSea.model.ShipTypeScene;
+import byu.cit260.secretsOfTheSea.model.Statues;
+import byu.cit260.secretsOfTheSea.model.Tokens;
 
 /**
  *
@@ -60,6 +68,16 @@ public class SecretsOfTheSea {
         TreasureItems treasureItemsOne = new TreasureItems();
         Water waterOne = new Water();
         Actor actorOne = new Actor();
+        Game gameOne = new Game();
+        Map mapOne = new Map();
+        LocationOfScene locationOfSceneOne = new LocationOfScene();
+        ResourceTypeScene resourceTypeSceneOne = new ResourceTypeScene();
+        RegularTypeScene regularTypeSceneOne = new RegularTypeScene();
+        ShipTypeScene shipTypeSceneOne = new ShipTypeScene();
+        Tokens tokensOne = new Tokens(); 
+        Statues statuesOne = new Statues();
+        
+        
         
         playerOne.setName("Abby");
         playerOne.setBestTime(7.00);
@@ -160,10 +178,42 @@ public class SecretsOfTheSea {
         actorOne.setDescription("male");
         actorOne.setCoordinates(14.00);
         
+        gameOne.setTotalTime(60.00);
+        gameOne.setNoOfPlayers(2.00);
         
-            
+        mapOne.setRowCount(4.00);
+        mapOne.setColumnCount(4.00);
         
-
+        locationOfSceneOne.setRow(4.00);
+        locationOfSceneOne.setColumn(18.00);
+        locationOfSceneOne.setVisited("yes");
+        locationOfSceneOne.setAmountRemaining(5.00);
+        
+        resourceTypeSceneOne.setDescription("reef");
+        resourceTypeSceneOne.setTravelTime(67.00);
+        resourceTypeSceneOne.setBlocked("yes");
+        resourceTypeSceneOne.setSymbol("star");
+        resourceTypeSceneOne.setAmountAvailable(35.00);
+        resourceTypeSceneOne.setResourceType("fruit");
+        
+        regularTypeSceneOne.setDescription("regular");
+        regularTypeSceneOne.setTravelTime(35.00);
+        regularTypeSceneOne.setBlocked("no");
+        regularTypeSceneOne.setSymbol("diamond");
+        
+        shipTypeSceneOne.setDescription("regular");
+        shipTypeSceneOne.setTravelTime(36.00);
+        shipTypeSceneOne.setBlocked("no");
+        shipTypeSceneOne.setSymbol("diamond");
+        
+        tokensOne.setTokenDescription("gold");
+        tokensOne.setTokenType("round");
+        
+        statuesOne.setStatueDescription("tall");
+        statuesOne.setStatueType("fish");
+        
+        
+             
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
 
@@ -226,6 +276,32 @@ public class SecretsOfTheSea {
         
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+        
+        String locationOfSceneInfo = locationOfSceneOne.toString();
+        System.out.println(locationOfSceneInfo);
+        
+        String resourceTypeSceneInfo = resourceTypeSceneOne.toString();
+        System.out.println(resourceTypeSceneInfo);
+        
+        String regularTypeSceneInfo = regularTypeSceneOne.toString();
+        System.out.println(regularTypeSceneInfo);
+        
+        String shipTypeSceneInfo = shipTypeSceneOne.toString();
+        System.out.println(shipTypeSceneInfo);
+        
+        String tokensInfo = tokensOne.toString();
+        System.out.println(tokensInfo);
+        
+        String statuesInfo = statuesOne.toString();
+        System.out.println(statuesInfo);
+        
+        
         
     }
     
