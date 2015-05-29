@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Artifacts implements Serializable{
     
     // class instance variables
-    private String artifactType;
+    private String artifactType; 
     private Double artifactValue;
     private Double artifactSize;
     private Double artifactWeight;
