@@ -192,10 +192,49 @@ public class InventoryControlTest {
         // **TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype."); //
         
+        
       
     }
-      
+
+    /**
+     * Test of calcQtyOfFood method, of class InventoryControl.
+     */
+
+    @Test
+    public void testCalcQtyOfFood() {
+        System.out.println("calcQtyOfFood");
         
+        
+        /******************/
+        /***Test case #1 - Food***/
+        /******************/
+        
+        System.out.println("\tTest case #1 for Food");
+        double totalPeople = 30;
+        double daysAtSea = 10;
+        double mealsPerDay = 3;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 900;
+        double result = instance.calcQtyOfFood(totalPeople, daysAtSea, mealsPerDay);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("\tTest case #2 for Food");
+        totalPeople = -1;
+        daysAtSea = 10;
+        mealsPerDay = 3;
+        expResult = -1.0;
+        result = instance.calcQtyOfFood(totalPeople, daysAtSea, mealsPerDay);
+        assertEquals(expResult, result, 0.0001);
+       
+    }
+      
+    
+        /******************/
+        /***Test case #2 - Food***/
+        /******************/
+        
+       
         
     
     

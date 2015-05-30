@@ -29,10 +29,30 @@ public class InventoryControl {
 
 	double waterNeeded = (totalPeople * daysAtSea * gallonsOfWaterPerPersonPerDay);
 
-	return waterNeeded;
-
-        
+	return waterNeeded;    
       
     }
+    
+    
+    public double calcQtyOfFood (double totalPeople, double daysAtSea, double mealsPerDay) {
+        
+        if (totalPeople < 10 || totalPeople > 30) {
+            return -1;
+        }
+		
+
+        if (daysAtSea > 10) {
+            return -1; 
+        }
+		
+
+	mealsPerDay = 3;
+
+	double totalMeals = (totalPeople * daysAtSea * mealsPerDay);
+
+	return totalMeals;    
+      
+    }
+    
     
 }
