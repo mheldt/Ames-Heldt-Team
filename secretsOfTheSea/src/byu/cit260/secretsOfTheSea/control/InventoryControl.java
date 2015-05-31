@@ -29,10 +29,14 @@ public class InventoryControl {
 
 	double waterNeeded = (totalPeople * daysAtSea * gallonsOfWaterPerPersonPerDay);
 
+
 	return waterNeeded;    
       
+
+
+
     }
-    
+
     
     public double calcQtyOfFood (double totalPeople, double daysAtSea, double mealsPerDay) {
         
@@ -55,4 +59,26 @@ public class InventoryControl {
     }
     
     
+
+    public double calcQuantityOfMunitions(double totalPeople, double bulletsPerGun) {
+        
+        if (totalPeople < 10 || totalPeople > 30) {
+            return -1;
+        }
+		
+        if (bulletsPerGun <10 || bulletsPerGun > 100) {
+            return -1; 
+        }
+		
+        double gunPowderShotsPerKeg = 100;
+	double totalGuns = totalPeople * 2;
+
+	double totalBullets = (bulletsPerGun * totalGuns);
+	double totalPowderKegs = totalBullets/gunPowderShotsPerKeg;
+       
+        return totalGuns+totalBullets+totalPowderKegs;
+        
+    }
+
 }
+
