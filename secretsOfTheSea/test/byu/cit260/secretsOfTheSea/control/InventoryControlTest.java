@@ -191,10 +191,62 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0001);
         // **TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype."); //
+    }   
+
+    /**
+     * Test of calcQuantityOfMunitions method, of class InventoryControl.
+     */
+    @Test
+    public void testCalcQuantityOfMunitions() {
+        // System.out.println("calcQuantityOfMunitions");
+        System.out.println("calcQuantityOfMunitions");
+        System.out.println("\tTest case #1");
+        double totalPeople = 30;
+        double bulletsPerGun = 100;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 6120;
+        double result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);
+
+        System.out.println("\tTest case #2");
+        totalPeople = 3;
+        bulletsPerGun = 50;
+        expResult = -1.0;
+        result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);       
+
+        System.out.println("\tTest case #3");
+        totalPeople = 1;
+        bulletsPerGun = 110;
+        expResult = -1.0;
+        result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);
+
+        System.out.println("\tTest case #4");
+        totalPeople = 0;
+        bulletsPerGun = 100;
+        expResult = -1.0;
+        result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);
+
+        System.out.println("\tTest case #5");
+        totalPeople = 30;
+        bulletsPerGun = 0;
+        expResult = -1.0;
+        result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);
+
+        System.out.println("\tTest case #6");
+        totalPeople = 3;
+        bulletsPerGun = 50;
+        expResult = -1.0;
+        result = instance.calcQuantityOfMunitions(totalPeople, bulletsPerGun);
+        assertEquals(expResult, result, 0.0001);
         
         
       
     }
+
 
     /**
      * Test of calcQtyOfFood method, of class InventoryControl.
@@ -236,6 +288,6 @@ public class InventoryControlTest {
         
        
         
-    
+
     
 }
