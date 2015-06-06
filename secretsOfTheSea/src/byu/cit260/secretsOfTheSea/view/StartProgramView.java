@@ -36,7 +36,10 @@ public class StartProgramView {
             
             //Display a customized welcome message
             this.displayWelcomeMessage(player);
+            
             //Display the main menu
+            MainMenuView mainMenu = new MainMenuView();
+            mainMenu.displayMenu();
       
         //END        
    
@@ -78,13 +81,13 @@ public class StartProgramView {
     }
 
     public String getPlayersName() {
-        boolean valid = false; //indicateds if the name has be retrieved
+        boolean valid = false; //indicates if the name has be retrieved
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); //keyboard input stream
         
-        while(!valid) { //while a valide name hasn't been retrieved
+        while(!valid) { //while a valid name hasn't been retrieved
             
-            // prompt for the player's na,e
+            // prompt for the player's name
             System.out.println("Enter the player's name below:");
             
             //get the name from the keyboard and trim off the blanks
