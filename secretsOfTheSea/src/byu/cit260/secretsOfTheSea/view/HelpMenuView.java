@@ -13,17 +13,23 @@ import java.util.Scanner;
  *
  * @author jacieames
  */
-public class MainMenuView {
+public class HelpMenuView {
     
     private final String MENU = "\n"
             + "\n---------------------------------------"
-            + "\n| Main Menu                           |"
+            + "\n| Help Menu                           |"
             + "\n|----------------------------         |"
-            + "\nN - Start new game"
-            + "\nG - Start existing game"
-            + "\nH - Help menu"
-            + "\nS - Save game"
+            + "\nG - Goal of the Game"
+            + "\nM - How to Move"
+            + "\nO - Explore Location"
+            + "\nI - View Inventory"
+            + "\nW - Work on the Ship"
+            + "\nV - View Ship Status"
+            + "\nR - Exchange resources"
+            + "\nL - Launch the ship"
+            + "\nD - Dock the ship"
             + "\nE - Exit"
+            
             + "\n---------------------------------------";
             
     public void displayMenu() {
@@ -69,11 +75,11 @@ public class MainMenuView {
             
             //if name is invalid
             if (selection.length() > 1) {
-            
+                
                 System.out.println("Invalid character");
                 continue; // and repeat again
+               
             }
-            
             break; // out of the (exit) the repetition
         }
         
@@ -85,18 +91,40 @@ public class MainMenuView {
 
     private void doAction(char selection) {
         switch (selection) {
-		case 'N':
-			this.startNewGame();
-			break;
 		case 'G':
-			this.startExistingGame();
+			this.goalOfGame();
 			break;
-		case 'H':
-			this.displayHelpMenu();
+		case 'M':
+			this.howToMove();
 			break;
-		case 'S':
-			this.saveGame();
+		case 'O':
+			this.exploreLocation();
 			break;
+		case 'I':
+			this.viewInventory();
+			break;
+                    
+                case 'W':
+			this.workOnShip();
+			break;
+                    
+                case 'V':
+			this.viewShipStatus();
+			break;
+                    
+                case 'R':
+			this.exchangeResources();
+			break;
+                    
+                case 'L':
+			this.launchShip();
+			break;
+                    
+                case 'D':
+			this.dockShip();
+			break;
+                    
+                
 		case 'E':
 			return;
 		default:
@@ -106,81 +134,58 @@ public class MainMenuView {
         
         
         
-
         
-    }
-
-   //**
-    
-    //private void startNewGame() {
-        //create a new game
-        //GameControl.createNewGame(SecretsOfTheSea.getPlayerOne());
-        
-        //display the game
-        //GameMenuView gameMenu = new GameMenuView();
-        //gameMenu.displayMenu();
-        
-    //}
-    
-    //**
-    
-    private void displayHelpMenu() {
-        GameControl.createHelpMenu(SecretsOfTheSea());
-        
-        //display the help menu
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
-        
-    }
-    
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
-    }
-
-    private void startNewGame() {
-            // create a new game
-        GameControl.createNewGame(SecretsOfTheSea());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    
-    
-  
-        
-        
-    }
-
-    private Player SecretsOfTheSea() {
-        Player currentGame = null;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-        return currentGame;
-    }
-
-    private static class GameMenuView {
-
-        public GameMenuView() {
-        }
-
-        private void displayMenu() {
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-    }
-
-    
-
-    
-	
          
-   
+        
+              
 
         
-        
-}
+    }
+
+    private void goalOfGame() {
+        System.out.println("*** Goal Of Game Function Called ***");
+    }
+
+    private void howToMove() {
+        System.out.println("*** How To Move Function Called ***");
+    }
+
+    private void exploreLocation() {
+        System.out.println("*** Explore Location Function Called ***");   
+    }     
+
+    private void viewInventory() { 
+        System.out.println("*** View Inventory Function Called ***");
+    }
+
+    private void workOnShip() {
+        System.out.println("*** Work on Ship Function Called ***");
+    }
+
+    private void viewShipStatus() {
+        System.out.println("*** View Ship Status Function Called ***");
+    }
+
+    private void exchangeResources() {
+        System.out.println("*** Exchange Resources Function Called ***");
+    }
+
+    private void launchShip() {
+        System.out.println("*** Launch Ship Function Called ***");
+    }
+
+    private void dockShip() {
+        System.out.println("*** Dock Ship Function Called ***");
+    }
     
+}
 
+  
+    
+    
+    
+    
+    
+    
+    
+ 

@@ -65,9 +65,26 @@ public class SecretsOfTheSea {
         SecretsOfTheSea.currentGame = currentGame;
     }
 
-    public Player getPlayerOne() {
-        return playerOne;
+    public static Game getPlayerOne() {
+        return currentGame;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static Game startNewGame() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return currentGame;
+    }
+
+    public static Game getPlayer() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return currentGame;
+    }
+
+    public static Game getPlayersName() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return currentGame;
+    }
+
 
     public void setPlayerOne(Player playerOne) {
         this.playerOne = playerOne;
