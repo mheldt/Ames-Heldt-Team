@@ -13,12 +13,15 @@ import byu.cit260.secretsOfTheSea.model.Player;
  */
 public class GameControl {
     
-    public static void createNewGame (Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
-    }
+
 
     public static void createHelpMenu(Player SecretsOfTheSea) {
         System.out.println("\n*** createHelpMenu stub function called ***");
+    }
+
+
+    public static void createGameMenu(Player SecretsOfTheSea) {
+        System.out.println("\n*** createGameMenu stub function called ***");
     }
     
 }

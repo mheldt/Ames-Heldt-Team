@@ -86,7 +86,7 @@ public class MainMenuView {
     private void doAction(char selection) {
         switch (selection) {
 		case 'N':
-			this.startNewGame();
+			this.startNewGame(); // go to Game Menu
 			break;
 		case 'G':
 			this.startExistingGame();
@@ -125,6 +125,7 @@ public class MainMenuView {
     //**
     
     private void displayHelpMenu() {
+            // display help menu
         GameControl.createHelpMenu(SecretsOfTheSea());
         
         //display the help menu
@@ -132,6 +133,19 @@ public class MainMenuView {
         helpMenu.displayMenu();
         
     }
+    
+    
+    private void startNewGame() {
+            // create a new game
+        GameControl.createGameMenu(SecretsOfTheSea());
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+        
+        
+  
+    }
+    
     
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
@@ -141,19 +155,7 @@ public class MainMenuView {
         System.out.println("*** startExistingGame function called ***");
     }
 
-    private void startNewGame() {
-            // create a new game
-        GameControl.createNewGame(SecretsOfTheSea());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
     
-    
-  
-        
-        
-    }
 
     private Player SecretsOfTheSea() {
         Player currentGame = null;
@@ -162,6 +164,8 @@ public class MainMenuView {
         return currentGame;
     }
 
+    
+    /**
     private static class GameMenuView {
 
         public GameMenuView() {
@@ -170,16 +174,11 @@ public class MainMenuView {
         private void displayMenu() {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
-    }
+         }
+    **/
 
     
-
-    
-	
-         
-   
-
-        
+       
         
 }
     

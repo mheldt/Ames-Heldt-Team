@@ -21,13 +21,7 @@ public class HelpMenuView {
             + "\n|----------------------------         |"
             + "\nG - Goal of the Game"
             + "\nM - How to Move"
-            + "\nO - Explore Location"
-            + "\nI - View Inventory"
-            + "\nW - Work on the Ship"
-            + "\nV - View Ship Status"
-            + "\nR - Exchange resources"
-            + "\nL - Launch the ship"
-            + "\nD - Dock the ship"
+            + "\nS - How to Save"
             + "\nE - Exit"
             
             + "\n---------------------------------------";
@@ -37,7 +31,7 @@ public class HelpMenuView {
         char selection = ' ';
         do {
             
-            System.out.println(MENU); //display the main menu
+            System.out.println(MENU); //display the help menu
             
             String input = this.getInput(); //get user's selection
             selection = input.charAt(0);//get first character of string
@@ -97,36 +91,15 @@ public class HelpMenuView {
 		case 'M':
 			this.howToMove();
 			break;
-		case 'O':
-			this.exploreLocation();
-			break;
-		case 'I':
-			this.viewInventory();
-			break;
-                    
-                case 'W':
-			this.workOnShip();
-			break;
-                    
-                case 'V':
-			this.viewShipStatus();
-			break;
-                    
-                case 'R':
-			this.exchangeResources();
-			break;
-                    
-                case 'L':
-			this.launchShip();
-			break;
-                    
-                case 'D':
-			this.dockShip();
+		case 'S':
+			this.howToSave();
 			break;
                     
                 
 		case 'E':
-			return;
+			this.backToMain();
+                        break; 
+                    
 		default:
 			System.out.println("\n*** Invalid selection *** Try again");
 			break;
@@ -150,33 +123,26 @@ public class HelpMenuView {
         System.out.println("*** How To Move Function Called ***");
     }
 
-    private void exploreLocation() {
+    private void howToSave() {
         System.out.println("*** Explore Location Function Called ***");   
     }     
 
-    private void viewInventory() { 
-        System.out.println("*** View Inventory Function Called ***");
-    }
 
-    private void workOnShip() {
-        System.out.println("*** Work on Ship Function Called ***");
+    private void backToMain() {
+        
+        // back to main menu
+        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
+        
     }
+    
 
-    private void viewShipStatus() {
-        System.out.println("*** View Ship Status Function Called ***");
-    }
-
-    private void exchangeResources() {
-        System.out.println("*** Exchange Resources Function Called ***");
-    }
-
-    private void launchShip() {
-        System.out.println("*** Launch Ship Function Called ***");
-    }
-
-    private void dockShip() {
-        System.out.println("*** Dock Ship Function Called ***");
-    }
+    
+    
+    
+    
+    
     
 }
 
