@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byu.cit260.secretsOfTheSea.view;
 
 import byu.cit260.secretsOfTheSea.control.GameControl;
@@ -18,9 +13,9 @@ public class MainMenuView extends View {
     
     public MainMenuView() {
      super("\n"
-            + "\n---------------------------------------"
+            + "\n|-------------------------------------|"
             + "\n| Main Menu                           |"
-            + "\n|----------------------------         |"
+            + "\n|-------------------------------------|"
             + "\nN - Start new game"
             + "\nG - Start existing game"
             + "\nH - Help menu"
@@ -29,27 +24,19 @@ public class MainMenuView extends View {
             + "\n---------------------------------------");
             
         }
-
     
     @Override
     public boolean doAction(Object obj) {
     
-    String value = (String) obj;
+        String value = (String) obj;
+
+        value = value.toUpperCase(); // convert all to uppercase
+        char choice = value.charAt(0); // get first character entered
+        return false;
+
+    } 
     
-    value = value.toUpperCase(); // convert all to uppercase
-    char choice = value.charAt(0); // get first character entered
-        
-     
-    return false;
-        
-        
-    }
-
-     
-        
-
-        
-        
+    
     private void doAction(char selection) {
         switch (selection) {
 		case 'N':
@@ -69,38 +56,25 @@ public class MainMenuView extends View {
 		default:
 			System.out.println("\n*** Invalid selection *** Try again");
 			break;
-    }
-        
-        
-        
-
-        
+                }
     }
 
-  
-    
     private void displayHelpMenu() {
             // display help menu
         GameControl.createHelpMenu(SecretsOfTheSea());
         
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.display();
-        
+        helpMenu.display();   
     }
-    
-    
+ 
     private void startNewGame() {
             // create a new game
         GameControl.createGameMenu(SecretsOfTheSea());
         
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-        
-        
-  
     }
-    
     
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
@@ -110,8 +84,6 @@ public class MainMenuView extends View {
         System.out.println("*** startExistingGame function called ***");
     }
 
-    
-
     private Player SecretsOfTheSea() {
         Player currentGame = null;
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -120,10 +92,6 @@ public class MainMenuView extends View {
     }
 
     
-    
-
-    
-       
         
 }
     

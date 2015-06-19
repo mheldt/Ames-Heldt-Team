@@ -12,22 +12,12 @@ import java.util.Scanner;
  * @author jacieames
  */
 public abstract class View implements ViewInterface {
-    
-    
+       
     private String promptMessage;
-    
     public View(String promptMessage) {
-        
-        this.promptMessage = promptMessage;
-        
+        this.promptMessage = promptMessage;  
     }
-
-   
-    
-    
-    
-    
-    
+ 
     @Override
     public void display() {
         
@@ -35,19 +25,15 @@ public abstract class View implements ViewInterface {
         boolean done = false;
         
         char selection = ' ';
-        do {
-            
+        do { 
             System.out.println(this.promptMessage); //display the main menu
             
             String input = this.getInput(); //get user's selection
             selection = input.charAt(0);//get first character of string
+            boolean doAction = this.doAction(selection); // do action based on selection
             
-            this.doAction(selection); // do action based on selection
-            
-        } while (selection != 'E'); //a selection is not "Exit"
-        
-
-        
+            } 
+        while (selection != 'E'); //a selection is not "Exit" 
     }
             
 
@@ -77,13 +63,8 @@ public abstract class View implements ViewInterface {
         }
         
         return selection; // return the selection
-        
-        
-    
     }
-    
-        
-        
+       
     public String getPromptMessage() {
         return promptMessage;
     }

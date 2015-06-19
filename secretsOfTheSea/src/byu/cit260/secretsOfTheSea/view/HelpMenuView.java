@@ -41,18 +41,9 @@ import java.util.Scanner;
     value = value.toUpperCase(); // convert all to uppercase
     char choice = value.charAt(0); // get first character entered
         return false;
-        
-        
-        
+      
     }
-    
-    
-    
-    
-        
-        
-        
-        
+      
         
     private void doAction(char selection) {
         switch (selection) {
@@ -74,16 +65,8 @@ import java.util.Scanner;
 		default:
 			System.out.println("\n*** Invalid selection *** Try again");
 			break;
-    }
-        
-        
-        
-        
-         
-        
-              
-
-        
+        }
+      
     }
 
     private void goalOfGame() {
