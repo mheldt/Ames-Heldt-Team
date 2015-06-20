@@ -28,10 +28,11 @@ public class MainMenuView extends View {
     @Override
     public boolean doAction(Object obj) {
     
-        String value = (String) obj;
+        String value = String.valueOf(obj);
 
         value = value.toUpperCase(); // convert all to uppercase
         char choice = value.charAt(0); // get first character entered
+        
         return false;
 
     } 
@@ -43,13 +44,13 @@ public class MainMenuView extends View {
 			this.startNewGame(); // go to Game Menu
 			break;
 		case 'G':
-			this.startExistingGame();
+			this.startExistingGame(); // start a saved game
 			break;
 		case 'H':
-			this.displayHelpMenu();
+			this.displayHelpMenu(); // display the help menu
 			break;
 		case 'S':
-			this.saveGame();
+			this.saveGame(); // save the current game
 			break;
 		case 'E':
 			return;

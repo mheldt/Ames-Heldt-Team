@@ -5,6 +5,7 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
+import byu.cit260.secretsOfTheSea.model.Food;
 import byu.cit260.secretsOfTheSea.model.Player;
 import secretsofthesea.SecretsOfTheSea;
 
@@ -28,6 +29,10 @@ public class ProgramControl {
     
     return player;
     
+    }
+
+    public static Food createFood(String foodNeeded) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

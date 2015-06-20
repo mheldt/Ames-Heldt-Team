@@ -40,12 +40,12 @@ import java.util.Scanner;
     @Override
     public boolean doAction(Object obj) {
     
-    String value = (String) obj;
+    String value = String.valueOf(obj);
     
     value = value.toUpperCase(); // convert all to uppercase
     char choice = value.charAt(0); // get first character entered
-        return false;
         
+        return false;
         
         
     }    
@@ -94,7 +94,11 @@ import java.util.Scanner;
 		default:
 			System.out.println("\n*** Invalid selection *** Try again");
 			break;
-    }
+    
+        
+        
+        
+        }
         
         
         
