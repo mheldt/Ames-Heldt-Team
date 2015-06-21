@@ -17,14 +17,11 @@ import java.util.Scanner;
 public class ObtainFoodView {
     private Object mainMenu;
     private Object food;
-    
-        
-    
+
     public ObtainFoodView() {
         
     }
-    
-    
+
     public void startProgram() {
         
         //BEGIN
@@ -35,14 +32,14 @@ public class ObtainFoodView {
             String foodNeeded = this.getFoodNeeded();
             
             //Create the food
-            Food food = ProgramControl.createFood(foodNeeded);
+            Food foodb = ProgramControl.createFood(foodNeeded);
             
             //Display a food status
-            this.displayFoodNeeded(food);
+            this.displayFoodNeeded(foodb);
             
             //Display the game menu
             GameMenuView gameMenu = new GameMenuView();
-            mainMenu.display();
+            gameMenu.display();
       
         //END        
    
@@ -52,18 +49,12 @@ public class ObtainFoodView {
 
     private void displayBanner() {
         
-        System.out.println("\n\n*************");
-        
-        
-        System.out.println ("*                                                      *"
+        System.out.println("\n\n*************");     
+        System.out.println("*                                                      *"
         +"\n* Welcome to the food station where you can load up food                *"
         +"\n* for your voyage!                                                      *");
-                                                             
-        
-        System.out.println("\n\n*************");
-        
-        
-        
+
+        System.out.println("\n\n*************");  
     }
 
     public String getTotalPeople() {
@@ -80,19 +71,13 @@ public class ObtainFoodView {
             String totalPeople = keyboard.nextLine();
             totalPeople = playersName.trim();
             
-               
-            }
             break; // out of the (exit) the repetition
         }
-        String totalPeople = null;
+        return totalPeople; // return the name   
+    }
+        String totalPeople = null;        
         
-        return totalPeople; // return the name
-        
-        
-        
-        
-        
-        public String getDaysAtSea() {
+    public String getDaysAtSea() {
         boolean valid = false; //indicates if amount needed has been retrieved
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); //keyboard input stream
@@ -105,47 +90,26 @@ public class ObtainFoodView {
             //get the amount from the keyboard and trim off the blanks
             String totalPeople = keyboard.nextLine();
             totalPeople = playersName.trim();
-            
-               
-            }
             break; // out of the (exit) the repetition
-        
-        String daysAtSea = null;
-        
-        return daysAtSea; // return the name
-        
-        }
-        
-        
-        
+        }      
+        return daysAtSea; // return the name 
+    }
+    String daysAtSea = null;   
+         
 
     private String getFoodNeeded() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displayFoodNeeded(Food food) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-        
-        
-        
-        
-    
-    }
-
-    private void displayFoodNeeded(Food food) {
+    private void displayFoodNeeded(Food foodb) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
+    // private void displayFoodNeeded(Food foodb) {
         System.out.println("\n\n=================");
-        System.out.println("\tYou now have " + food.getFoodNeeded());
+        System.out.println("\tYou now have " + foodb.getFoodNeeded());
         System.out.println("\tGood luck on your journey!");
         System.out.println("====================");
         
     }
-
-    private void displayFoodNeeded(Food food) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-                
-    
-    
 }
+

@@ -24,4 +24,7 @@ public class GameControl {
         System.out.println("\n*** createGameMenu stub function called ***");
     }
     
+     public static void createInventoryMenu(Player SecretsOfTheSea) {
+        System.out.println("\n*** createQtyOfFood stub function called ***");
+    }
 }

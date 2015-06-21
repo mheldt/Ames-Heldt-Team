@@ -68,6 +68,10 @@ public class Food implements Serializable{
         }
         return true;
     }
+
+    public String getFoodNeeded() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

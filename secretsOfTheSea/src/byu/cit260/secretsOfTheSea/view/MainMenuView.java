@@ -37,7 +37,6 @@ public class MainMenuView extends View {
 
     } 
     
-    
     private void doAction(char selection) {
         switch (selection) {
 		case 'N':
@@ -71,10 +70,16 @@ public class MainMenuView extends View {
  
     private void startNewGame() {
             // create a new game
+        //System.out.println("*** Start New Game function called ***");
         GameControl.createGameMenu(SecretsOfTheSea());
+        //System.out.println("*** Start New Game 2 function called ***");
         
         GameMenuView gameMenu = new GameMenuView();
+        //System.out.println("*** Start New Game 3 function called ***");
+
         gameMenu.display();
+        //System.out.println("*** Start New Game 4 function called ***");
+
     }
     
     private void saveGame() {

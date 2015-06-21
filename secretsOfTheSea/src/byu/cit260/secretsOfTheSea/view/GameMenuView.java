@@ -14,11 +14,9 @@ import java.util.Scanner;
  * @author jacieames
  */
 
-    public class GameMenuView extends View {
-    
-    
+public class GameMenuView extends View {
     public GameMenuView() {
-     super("\n"
+        super("\n"
             + "\n---------------------------------------"
             + "\n| Game Menu                           |"
             + "\n|----------------------------         |"
@@ -35,7 +33,6 @@ import java.util.Scanner;
             + "\n---------------------------------------");
             
         }
-
     
     @Override
     public boolean doAction(Object obj) {
@@ -44,8 +41,7 @@ import java.util.Scanner;
     
     value = value.toUpperCase(); // convert all to uppercase
     char choice = value.charAt(0); // get first character entered
-        
-        return false;
+    return false;
         
         
     }    
@@ -55,59 +51,48 @@ import java.util.Scanner;
 
     private void doAction(char selection) {
         switch (selection) {
-		case 'G':
-			this.goalOfGame();
-			break;
-		case 'M':
-			this.howToMove();
-			break;
-		case 'O':
-			this.exploreLocation();
-			break;
-		case 'I':
-			this.viewInventory();
-			break;
-                    
-                case 'W':
-			this.workOnShip();
-			break;
-                    
-                case 'V':
-			this.viewShipStatus();
-			break;
-                    
-                case 'R':
-			this.exchangeResources();
-			break;
-                    
-                case 'L':
-			this.launchShip();
-			break;
-                    
-                case 'D':
-			this.dockShip();
-			break;
-                    
-                
-		case 'E':
-			return;
-		default:
-			System.out.println("\n*** Invalid selection *** Try again");
-			break;
-    
-        
-        
-        
-        }
-        
-        
-        
-        
-         
-        
-              
+            case 'G':
+                    this.goalOfGame();
+                    break;
+            case 'M':
+                    this.howToMove();
+                    break;
+            case 'O':
+                    this.exploreLocation();
+                    break;
+            case 'I':
+                    this.viewInventory();
+                    break;
 
-        
+            case 'W':
+                    this.workOnShip();
+                    break;
+
+            case 'V':
+                    this.viewShipStatus();
+                    break;
+
+            case 'R':
+                    this.exchangeResources();
+                    break;
+
+            case 'L':
+                    this.launchShip();
+                    break;
+
+            case 'D':
+                    this.dockShip();
+                    break;
+
+
+            case 'E':
+                    return;
+            default:
+                    System.out.println("\n*** Invalid selection *** Try again");
+                    break;
+ 
+        }
+            
     }
 
     private void goalOfGame() {
