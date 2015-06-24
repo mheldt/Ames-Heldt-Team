@@ -75,9 +75,7 @@ public class StartProgramView {
         +"\n* land.                                                                 *");                                               
         
         System.out.println("\n\n*************");
-        
-        
-        
+    
     }
 
     public String getPlayersName() {
@@ -105,9 +103,7 @@ public class StartProgramView {
         }
         
         return playersName; // return the name
-        
-        
-    
+ 
     }
 
     private void displayWelcomeMessage(Player player) {

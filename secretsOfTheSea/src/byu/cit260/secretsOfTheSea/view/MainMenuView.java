@@ -8,8 +8,7 @@ import java.util.Scanner;
  *
  * @author jacieames
  */
-public class MainMenuView extends View {
-    
+public class MainMenuView extends View {  
     
     public MainMenuView() {
      super("\n"
@@ -27,16 +26,14 @@ public class MainMenuView extends View {
     
     @Override
     public boolean doAction(Object obj) {
-    
+        
         String value = String.valueOf(obj);
-
-        value = value.toUpperCase(); // convert all to uppercase
+        //value = value.toUpperCase(); // convert all to uppercase
         char choice = value.charAt(0); // get first character entered
         
         return false;
-
     } 
-    
+   
     private void doAction(char selection) {
         switch (selection) {
 		case 'N':
@@ -58,7 +55,7 @@ public class MainMenuView extends View {
 			break;
                 }
     }
-
+        
     private void displayHelpMenu() {
             // display help menu
         GameControl.createHelpMenu(SecretsOfTheSea());
