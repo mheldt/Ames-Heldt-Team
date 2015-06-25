@@ -15,6 +15,7 @@ import java.util.Scanner;
  */
 
 public class GameMenuView extends View {
+    
     public GameMenuView() {
         super("\n"
             + "\n---------------------------------------"
@@ -37,10 +38,11 @@ public class GameMenuView extends View {
     @Override
     public boolean doAction(Object obj) {
     
-    String value = String.valueOf(obj);
+    String value = (String) obj;
     
     value = value.toUpperCase(); // convert all to uppercase
     char choice = value.charAt(0); // get first character entered
+    
     return false;
         
         

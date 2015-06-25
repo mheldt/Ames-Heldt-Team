@@ -32,10 +32,10 @@ public class ObtainFoodView {
             String foodNeeded = this.getFoodNeeded();
             
             //Create the food
-            Food foodb = ProgramControl.createFood(foodNeeded);
+            Food food = ProgramControl.createFood(foodNeeded);
             
             //Display a food status
-            this.displayFoodNeeded(foodb);
+            this.displayFoodNeeded(food);
             
             //Display the game menu
             GameMenuView gameMenu = new GameMenuView();
