@@ -5,10 +5,40 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
+import byu.cit260.secretsOfTheSea.model.Map;
+import javafx.scene.Scene;
+
 /**
  *
  * @author jacieames
  */
 public class MapControl {
+
+    public static Map createMap() {
+        
+        // create the map
+        Map map = new Map(20, 20);
+        
+        // create a list of the different scenes in the game
+        Scene[] scenes = createScenes();
+        
+        //assign the different scenes to locations in the map
+        GameControl.assignScenesToLocations(map, scenes);
+        
+        return map;
+        
+    }
+
+    static void moveActorToStartingLocation(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -9,6 +9,7 @@ import java.util.Scanner;
  * @author jacieames
  */
 public class MainMenuView extends View {  
+    private Object SecretsOfTheSea;
     
     public MainMenuView() {
      super("\n"
@@ -67,17 +68,29 @@ public class MainMenuView extends View {
  
     private void startNewGame() {
             // create a new game
-        //System.out.println("*** Start New Game function called ***");
-        GameControl.createGameMenu(SecretsOfTheSea());
-        //System.out.println("*** Start New Game 2 function called ***");
         
+        GameControl.createNewGame(SecretsOfTheSea.getPlayer());
+        
+        // display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        //System.out.println("*** Start New Game 3 function called ***");
-
         gameMenu.display();
-        //System.out.println("*** Start New Game 4 function called ***");
 
     }
+    
+    
+    
+    public class GameControl {
+    
+        public void createNewGame(Player player) {
+            System.out.println("\n*** createGameMenu stub function called ***");
+        }
+    
+     
+    }
+
+
+    
+    
     
     private void saveGame() {
         System.out.println("*** saveGame function called ***");

@@ -6,7 +6,9 @@
 package byu.cit260.secretsOfTheSea.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
@@ -14,25 +16,26 @@ import java.util.Objects;
  */
 public class LocationOfScene implements Serializable{
     
-    private Double row; 
-    private Double column;
-    private String visited;
-    private Double amountRemaining;
+    private int row; 
+    private int column;
+    private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
 
     public LocationOfScene() {
     }
     
     
 
-    public Double getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(Double row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public Double getColumn() {
+    public int getColumn() {
         return column;
     }
 

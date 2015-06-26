@@ -15,10 +15,20 @@ import java.util.Objects;
 public class Ships implements Serializable{
     
     // class instance variables
-    private String shipType;
+    private String description;
+    private double width;
+    private double length;
+    private double height;
+    private double maxWeightCapacity;
     private String inventoryComplete;
 
     public Ships() {
+        this.description = "This is the ship";
+        this.width = 0;
+        this.length = 0;
+        this.height = 0;
+        this.maxWeightCapacity = 0;
+        
     }
 
     

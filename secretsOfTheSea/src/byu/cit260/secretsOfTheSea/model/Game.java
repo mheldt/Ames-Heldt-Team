@@ -14,28 +14,68 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     
-    private Double totalTime;
-    private Double noOfPlayers;
+    private double totalTime;
+    private Ships ship;
+    private InventoryItem[] inventory;
+    private Player player;
+    private long noOfPlayers;
+    private String [] actor;
+    
+   
+    
+    
+    
+            
 
     public Game() {
     }
     
 
-    public Double getTotalTime() {
+    public double getTotalTime() {
         return totalTime;
     }
 
-    public void setTotalTime(Double totalTime) {
+    public void setTotalTime(Long totalTime) {
         this.totalTime = totalTime;
     }
+    
+    
+    public Ships getShip() {
+        return ship;
+    }
+    
+    public void setShip(Ships ships) {
+        this.ship = ship;
+    }
+    
+    
+    public InventoryItem [] getInventory() {
+        return inventory;
+    }
+    
+    
+    
+    
 
-    public Double getNoOfPlayers() {
+    public Long getNoOfPlayers() {
         return noOfPlayers;
     }
 
-    public void setNoOfPlayers(Double noOfPlayers) {
+    public void setNoOfPlayers(long noOfPlayers) {
         this.noOfPlayers = noOfPlayers;
+        
     }
+    
+    
+    public Player getPlayer() {
+        return player;
+    }
+    
+    public void setPlayer (Player player) {
+        this.player = player;
+    }
+ 
+    
 
     @Override
     public String toString() {
@@ -66,6 +106,10 @@ public class Game implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setShips(Ships ships) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
