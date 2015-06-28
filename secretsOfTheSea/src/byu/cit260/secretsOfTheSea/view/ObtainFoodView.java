@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byu.cit260.secretsOfTheSea.view;
 
 import byu.cit260.secretsOfTheSea.control.ProgramControl;
@@ -18,9 +14,7 @@ public class ObtainFoodView {
     private Object mainMenu;
     private Object food;
 
-    public ObtainFoodView() {
-        
-    }
+    //public ObtainFoodView() {       }
 
     public void startProgram() {
         
@@ -39,7 +33,7 @@ public class ObtainFoodView {
             
             //Display the game menu
             GameMenuView gameMenu = new GameMenuView();
-            gameMenu.display();
+            gameMenu.displayMenu();
       
         //END        
    
@@ -98,15 +92,15 @@ public class ObtainFoodView {
          
 
     private String getFoodNeeded() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void displayFoodNeeded(Food foodb) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
-    // private void displayFoodNeeded(Food foodb) {
+        
         System.out.println("\n\n=================");
-        System.out.println("\tYou now have " + foodb.getFoodNeeded());
+        //System.out.println("\tYou now have " + foodb.getFoodNeeded());
+        System.out.println("\tYou now have " + foodb);
         System.out.println("\tGood luck on your journey!");
         System.out.println("====================");
         

@@ -1,20 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byu.cit260.secretsOfTheSea.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Objects;
-import javafx.scene.Scene;
+//import java.util.ArrayList;
+//import java.util.Objects;
+//import javafx.scene.Scene;
 
 /**
  *
  * @author jacieames
  */
 public class LocationOfScene implements Serializable{
+
+// Blocking for testing purposes - Part of weeks assignment
+/**
     
     private int row; 
     private int column;
@@ -24,9 +23,7 @@ public class LocationOfScene implements Serializable{
 
     public LocationOfScene() {
     }
-    
-    
-
+ 
     public int getRow() {
         return row;
     }
@@ -59,9 +56,9 @@ public class LocationOfScene implements Serializable{
         this.amountRemaining = amountRemaining;
     }
 
-    @Override
-    public String toString() {
-        return "LocationOfScene{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaining=" + amountRemaining + '}';
+    //@Override
+    public String toString(String amountRemaining) {
+        return "LocationOfScene{(" + "row=" + row + ", column=" + column + ", visited=" + visited + ", amountRemaining=" + amountRemaining;} 
     }
 
     @Override
@@ -96,7 +93,7 @@ public class LocationOfScene implements Serializable{
     }
     
     
-    
+**/    
     
     
 }

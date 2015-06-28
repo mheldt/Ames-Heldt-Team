@@ -5,11 +5,17 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
+import byu.cit260.secretsOfTheSea.model.Player;
+
 /**
  *
  * @author jacieames
  */
 public class InventoryControl {
+
+    public static void createInventoryMenu(Player SecretsOfTheSea) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
@@ -36,7 +42,6 @@ public class InventoryControl {
 
 
     }
-
     
     public double calcQtyOfFood (double totalPeople, double daysAtSea, double mealsPerDay) {
         
@@ -60,7 +65,7 @@ public class InventoryControl {
     
     
 
-    public double calcQuantityOfMunitions(double totalPeople, double bulletsPerGun) {
+    public double calcQtyOfAmmo(double totalPeople, double bulletsPerGun) {
         
         if (totalPeople < 10 || totalPeople > 30) {
             return -1;
@@ -79,6 +84,13 @@ public class InventoryControl {
         return totalGuns+totalBullets+totalPowderKegs;
         
     }
+
+    double calcQuantityOfMunitions(double totalPeople, double bulletsPerGun) {
+        return 0;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
 }
 

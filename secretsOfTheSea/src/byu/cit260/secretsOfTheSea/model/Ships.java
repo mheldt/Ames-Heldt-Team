@@ -13,7 +13,11 @@ import java.util.Objects;
  * @author MarkH
  */
 public class Ships implements Serializable{
+
     
+    // Blocking for testing purposes - Part of weeks assignment
+/**
+
     // class instance variables
     private String description;
     private double width;
@@ -79,5 +83,6 @@ public class Ships implements Serializable{
         return true;
     }
     
+**/
     
 }

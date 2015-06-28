@@ -14,16 +14,19 @@ import javafx.scene.Scene;
  */
 public class MapControl {
 
+// Blocking for testing purposes - Part of weeks assignment
+
+
     public static Map createMap() {
         
         // create the map
-        Map map = new Map(20, 20);
+        //Map map = new Map(20, 20);
         
         // create a list of the different scenes in the game
         Scene[] scenes = createScenes();
         
         //assign the different scenes to locations in the map
-        GameControl.assignScenesToLocations(map, scenes);
+        //GameControl.assignScenesToLocations(map, scenes);
         
         return map;
         
@@ -40,5 +43,6 @@ public class MapControl {
     private static Scene[] createScenes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
     
 }

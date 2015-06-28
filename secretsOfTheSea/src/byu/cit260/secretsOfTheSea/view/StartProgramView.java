@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byu.cit260.secretsOfTheSea.view;
 
 import byu.cit260.secretsOfTheSea.control.ProgramControl;
@@ -14,13 +10,9 @@ import java.util.Scanner;
  * @author jacieames
  */
 public class StartProgramView {
-    
-        
-    
-    public StartProgramView() {
-        
-    }
-    
+     
+    public StartProgramView() {   }
+   
     
     public void startProgram() {
         
@@ -28,6 +20,7 @@ public class StartProgramView {
         
             //Display banner screen
             this.displayBanner();
+            
             //Get the players name
             String playersName = this.getPlayersName();
             
@@ -40,10 +33,16 @@ public class StartProgramView {
             //Display the main menu
             MainMenuView mainMenu = new MainMenuView();
             mainMenu.display();
+            
+            // mainMenu.doAction2('N');
+            //mainMenu.doAction2();
       
         //END        
-   
-            displayBanner ();
+            System.out.println("\n\n=================");
+            System.out.println("\tThank You For Playing");
+            System.out.println("\tWe hope you had fun!");
+            System.out.println("====================");
+            
         
         }
 
@@ -92,6 +91,7 @@ public class StartProgramView {
             playersName = keyboard.nextLine();
             playersName = playersName.trim();
             
+            
             //if name is invalid
             if (playersName.length() < 2) {
                 
@@ -113,8 +113,6 @@ public class StartProgramView {
         System.out.println("====================");
         
     }
-    
-                
-    
+ 
     
 }

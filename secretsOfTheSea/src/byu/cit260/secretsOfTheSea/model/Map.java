@@ -13,10 +13,15 @@ import java.util.Objects;
  * @author jacieames
  */
 public class Map implements Serializable{
+
+// Blocking for testing purposes - Part of weeks assignment
+/**
+    
+    
     
     private int rowCount;
     private int columnCount;
-    private Location[][] locations;
+    private Location[] locations;
 
     public Map() {
     }
@@ -104,6 +109,6 @@ public class Map implements Serializable{
     
     
     
-    
+**/   
     
 }

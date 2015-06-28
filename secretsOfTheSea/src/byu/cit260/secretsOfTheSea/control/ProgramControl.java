@@ -18,21 +18,21 @@ public class ProgramControl {
     public static Player createPlayer(String name) {
         System.out.println("\n**** createPlayer function called ****");
         
-      if (name == null ) {  
-        return null;
-    }
+        if (name == null ) {  
+            return null;
+        }
     
-    Player player = new Player ();
-    player.setName(name);
+        Player player = new Player ();
+        player.setName(name);
     
-    SecretsOfTheSea.setPlayer(player); // save the player
-    
-    return player;
-    
+        SecretsOfTheSea.setPlayer(player); // save the player
+        
+        return player; 
     }
 
     public static Food createFood(String foodNeeded) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
