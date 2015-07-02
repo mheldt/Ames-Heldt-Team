@@ -11,13 +11,13 @@ import java.util.Scanner;
  * @author jacieames
  */
 
-public class GameMenuView extends View {
+public class GameMenuView {
     
-    public GameMenuView() {
-        super("\n"
-            + "\n|-------------------------------------|"
+    private final String MENU = "\n"
+            
+            + "\n---------------------------------------"
             + "\n| Game Menu                           |"
-            + "\n|-------------------------------------|"
+            + "\n|----------------------------         |"
             + "\nM - Move to a New Location "
             + "\nM - How to Move"
             + "\nO - Explore Location"
@@ -28,138 +28,145 @@ public class GameMenuView extends View {
             + "\nL - Launch the ship"
             + "\nD - Dock the ship"
             + "\nE - Main Menu"
-            + "\n---------------------------------------");
+            + "\n---------------------------------------";
+            
+    
+    public void displayMenu() {
+        
+       char selection = ' ';
+       do {
+            System.out.println(MENU); //display the main menu
+            String input = this.getInput(); //get user's selection
+            selection = input.charAt(0);//get first character of string
+            this.doAction(selection); // do action based on selection   
+        } 
+        while (selection != 'E'); //a selection is not "Exit"            
     }
     
-    @Override
-    public boolean doAction(Object Obj) {
-        String value = (String) obj;
-        value = value.toUpperCase();
-        char choice = value.charAt(0);
-        return false;
-    }
-    
-        private void doAction(char myInput) {
-            switch (myInput) {
-                case 'G':
-                        this.goalOfGame();
-                        break;
-                case 'M':
-                        this.howToMove();
-                        break;
-                case 'O':
-                        this.exploreLocation();
-                        break;
-                case 'I':
-                        this.viewInventory();
-                        break;
+    private String getInput() {
+        boolean valid = false; //indicates if the command has be retrieved
+        String selection = null;
+        Scanner keyboard = new Scanner(System.in); //keyboard input stream
 
-                case 'W':
-                        this.workOnShip();
-                        break;
+        while(!valid) { //while a valid command hasn't been retrieved
 
-                case 'V':
-                        this.viewShipStatus();
-                        break;
+            // prompt for the player's selection
+            System.out.println("Please make a selection on the menu");
 
-                case 'R':
-                        this.exchangeResources();
-                        break;
+            //get the selection from the keyboard and trim off the blanks
+            selection = keyboard.nextLine();
+            selection = selection.trim();
 
-                case 'L':
-                        this.launchShip();
-                        break;
+            //if name is invalid
+            if (selection.length() > 1) {
 
-                case 'D':
-                        this.dockShip();
-                        break;
+                System.out.println("Invalid character");
+                continue; // and repeat again
 
-
-                case 'E':
-                        this.backToMain();
-                        break;
-                default:
-                        System.out.println("\n*** Invalid selection *** Try again");
-                        break;
-            }   
-        }
-
-        private void goalOfGame() {
-            System.out.println("*** Goal Of Game Function Called ***");
-        }
-
-        private void howToMove() {
-            System.out.println("*** How To Move Function Called ***");
-        }
-
-        private void exploreLocation() {
-            System.out.println("*** Explore Location Function Called ***");   
-        }     
-
-        private void viewInventory() { 
-            //System.out.println("*** View Inventory Function Called ***");
-            // display Inventory menu
-            InventoryControl.createInventoryMenu(SecretsOfTheSea());
-
-            //display the inventory menu
-            InventoryMenuView inventoryMenu = new InventoryMenuView();
-            inventoryMenu.displayMenu();   
-        }
-
-        private void workOnShip() {
-            System.out.println("*** Work on Ship Function Called ***");
-        }
-
-        private void viewShipStatus() {
-            System.out.println("*** View Ship Status Function Called ***");
-        }
-
-        private void exchangeResources() {
-            System.out.println("*** Exchange Resources Function Called ***");
-        }
-
-        private void launchShip() {
-            System.out.println("*** Launch Ship Function Called ***");
-        }
-
-        private void dockShip() {
-            System.out.println("*** Dock Ship Function Called ***");
-        }
-
-        private void backToMain() {
-            // back to main menu
-            MainMenuView mainMenu = new MainMenuView() { };
-            mainMenu.display();
             }
-
-        private Player SecretsOfTheSea() {
-            return null;
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            break; // out of the (exit) the repetition
         }
 
-        //@Override
-        //public boolean doAction(Object obj) {
-        //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        //}
-   
-   
-        //@Override
-        //public boolean doAction(Object obj) {
-        //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return selection; // return the selection
+       
+    }         
 
-    @Override
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void doAction(char selection) {
+        switch (selection) {
+            case 'G':
+                    this.goalOfGame();
+                    break;
+            case 'M':
+                    this.howToMove();
+                    break;
+            case 'O':
+                    this.exploreLocation();
+                    break;
+            case 'I':
+                    this.viewInventory();
+                    break;
+
+            case 'W':
+                    this.workOnShip();
+                    break;
+
+            case 'V':
+                    this.viewShipStatus();
+                    break;
+
+            case 'R':
+                    this.exchangeResources();
+                    break;
+
+            case 'L':
+                    this.launchShip();
+                    break;
+
+            case 'D':
+                    this.dockShip();
+                    break;
+
+
+            case 'E':
+                    this.backToMain();
+                    break;
+            default:
+                    System.out.println("\n*** Invalid selection *** Try again");
+                    break;
+        }
+            
+    }
+
+    private void goalOfGame() {
+        System.out.println("*** Goal Of Game Function Called ***");
+    }
+
+    private void howToMove() {
+        System.out.println("*** How To Move Function Called ***");
+    }
+
+    private void exploreLocation() {
+        System.out.println("*** Explore Location Function Called ***");   
+    }     
+
+    private void viewInventory() { 
+        //System.out.println("*** View Inventory Function Called ***");
+        // display Inventory menu
+        InventoryControl.createInventoryMenu(SecretsOfTheSea());
+        
+        //display the inventory menu
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayMenu();   
+    }
+
+    private void workOnShip() {
+        System.out.println("*** Work on Ship Function Called ***");
+    }
+
+    private void viewShipStatus() {
+        System.out.println("*** View Ship Status Function Called ***");
+    }
+
+    private void exchangeResources() {
+        System.out.println("*** Exchange Resources Function Called ***");
+    }
+
+    private void launchShip() {
+        System.out.println("*** Launch Ship Function Called ***");
+    }
+
+    private void dockShip() {
+        System.out.println("*** Dock Ship Function Called ***");
+    }
+    
+    private void backToMain() {
+        // back to main menu
+        MainMenuView mainMenu = new MainMenuView() { };
+        mainMenu.displayMenu();
+        }
+
+    private Player SecretsOfTheSea() {
+        return null;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-
-
-  
-    
-    
-    
-    
-    
-    
-    
- 

@@ -40,9 +40,9 @@ public class GameControl {
     }
 
 
-    public static void createNewGame(Player SecretsOfTheSea) {
-        System.out.println("\n*** createGameMenu stub function called ***");
-    }
+    //public static void createNewGame(Player SecretsOfTheSea) {
+    //    System.out.println("\n*** createGameMenu stub function called ***");
+    //}
     
     
     public static void createInventoryMenu(Player SecretsOfTheSea) {
@@ -58,7 +58,7 @@ public class GameControl {
        
     // New section of the Weeks lesson we did - taking out for testing
         
-    
+    /*
     public static InventoryItem[] createInventoryMenu() {
 
         // create array(list) of inventory items
@@ -86,6 +86,6 @@ public class GameControl {
         munitions.setRequiredAmt(Double.MIN_NORMAL);
         inventory[Item.munitions.ordinal()] = munitions;
     }   
-    
+    */
           
 }

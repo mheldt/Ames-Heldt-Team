@@ -17,7 +17,7 @@ public class MapControl {
 // Blocking for testing purposes - Part of weeks assignment
 
 
-    public static Map createMap() {
+    public MapControl() {
         
         // create the map
         //Map map = new Map(20, 20);
@@ -28,8 +28,8 @@ public class MapControl {
         //assign the different scenes to locations in the map
         //GameControl.assignScenesToLocations(map, scenes);
         
-        return map;
-        
+        //return map;
+        //return null;
     }
 
     static void moveActorToStartingLocation(Map map) {

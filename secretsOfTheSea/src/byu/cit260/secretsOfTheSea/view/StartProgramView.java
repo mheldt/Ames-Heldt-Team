@@ -32,7 +32,7 @@ public class StartProgramView {
             
             //Display the main menu
             MainMenuView mainMenu = new MainMenuView();
-            mainMenu.display();
+            mainMenu.displayMenu();
             
             // mainMenu.doAction2('N');
             //mainMenu.doAction2();

@@ -6,47 +6,48 @@ import java.util.Scanner;
  *
  * @author jacieames
  */
-public abstract class View implements ViewInterface {
+public class View implements ViewInterface {
 
-    private String promptMessage;
-    public View(String promptMessage) {
-        this.promptMessage = promptMessage;  
-    }
-    
+    //private String promptMessage;
+    //public View(String promptMessage) {
+    //    this.promptMessage = promptMessage;  
+    //}
     /*
-    @Override    
-    public void display() {
-           String myInput = "";
-           boolean done = false;
-
-           do { 
-               System.out.println(this.promptMessage); //display prompt message
-               myInput = this.getInput(); //get value end user entered
-               done = this.doAction(myInput);  // do action based on value entered                
-           }    
-           while (!done); 
-    }
-    */
     
+       
+    public void display() {
+        String myInput = "";
+        boolean done = false;
+        do { 
+            System.out.println(this.promptMessage); //display prompt message
+            myInput = this.getInput(); //get value end user entered
+            done = this.doAction(myInput);  // do action based on value entered                
+        }    
+        while (!done); 
+    }
+    
+    */
     // THIS IS OUR ORIGINAL CODE
     
     public void displayMenu() {
         char selection = ' ';
+        char displayMenu = ' ';
         do { 
-            System.out.println(this.promptMessage); //display the main menu
+            System.out.println(displayMenu); //display the main menu
 
             String input = this.getInput(); //get user's selection
             selection = input.charAt(0); //get first character of string
             this.doAction(selection);  // do action based on selection                 
         }    
         while (selection != 'E'); //a selection is not "Exit"  
-    }    
+    }  
            
+    
+    
     /*
-    @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in); //keyboard input stream
-        boolean valid = false; //indicates if the command has be retrieved
+        boolean valid = false; //indicates if the command has been retrieved
         String myInput = null;
   
         while(!valid) { //while a valid command hasn't been retrieved
@@ -92,12 +93,16 @@ public abstract class View implements ViewInterface {
                 System.out.println("Invalid character");
                 continue; // and repeat again
             }
+
+
             break; // out of the (exit) the repetition
         }
 
         return selection; // return the selection
     }
+
     
+    /*
     
     public String getPromptMessage() {
         return promptMessage;
@@ -106,5 +111,14 @@ public abstract class View implements ViewInterface {
     public void setPromptMessage(String Message) {
         this.promptMessage = Message;
     }
- 
+    */
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void MENU() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

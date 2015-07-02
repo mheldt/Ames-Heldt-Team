@@ -7,8 +7,10 @@ package byu.cit260.secretsOfTheSea.view;
  */
 public interface ViewInterface {
     
-    public void display();
+    public void displayMenu();
+    public void MENU();
     public String getInput();
-    public boolean doAction(Object obj); 
+    //public boolean doAction(Object obj); 
+    //public void doAction(); 
     
 }
