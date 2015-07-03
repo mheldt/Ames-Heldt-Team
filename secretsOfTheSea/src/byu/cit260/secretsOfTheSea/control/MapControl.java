@@ -5,8 +5,12 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
+import byu.cit260.secretsOfTheSea.exceptions.MapControlException;
+import byu.cit260.secretsOfTheSea.model.Actor;
 import byu.cit260.secretsOfTheSea.model.Map;
+import java.awt.Point;
 import javafx.scene.Scene;
+import secretsofthesea.SecretsOfTheSea;
 
 /**
  *
@@ -32,10 +36,46 @@ public class MapControl {
         //return null;
     }
 
-    static void moveActorToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static void moveActorToLocation(Actor actor, Point coordinates) 
+            throws MapControlException { 
+      
+        Map map = SecretsOfTheSea.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getNoOfRows() ||
+            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+            
+            throw new MapControlException("Can not move actor to location"
+                        + coordinates.x + ", " + coordinates.y
+                        + "because that location is outside"
+                        + "the bounds of the map.");
+        }
+        
     }
 
+    
+    
+     public static void moveActorToStartingLocation(Map map) 
+            throws MapControlException { 
+      
+        Actor[] actors = Actor.values();
+        // for every actor
+        for (Actor actor : actors) {
+            Point coordinates = actor.getCoordinates();
+            MapControl.moveActorToLocation(actor, coordinates);
+        
+        
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

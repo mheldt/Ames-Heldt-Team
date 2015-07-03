@@ -47,6 +47,25 @@ public class SecretsOfTheSea {
     private static Game currentGame = null;
     private static final Player player = null;
     //private static Player player = null;
+    
+    
+    
+    public static void main(String[] args) {
+        StartProgramView startProgramView = new StartProgramView();
+        try {
+        //create StartProgramView and start the program
+        startProgramView.display();   
+    
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            //te.printStackTrace();
+            startProgramView.display();
+            
+        }
+        
+    }
+    
+    
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -85,12 +104,7 @@ public class SecretsOfTheSea {
 
 
     
-    public static void main(String[] args) {
-        
-        //create StartProgramView and start the program
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();   
-    }
+    
 
     
         
