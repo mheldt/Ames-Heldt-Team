@@ -5,7 +5,7 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
-import byu.cit260.secretsOfTheSea.exceptions.MapControlException;
+import byu.cit260.secretsOfTheSea.exceptions.MapControlExceptions;
 import byu.cit260.secretsOfTheSea.model.Actor;
 import byu.cit260.secretsOfTheSea.model.Map;
 import java.awt.Point;
@@ -37,7 +37,7 @@ public class MapControl {
     }
 
     public static void moveActorToLocation(Actor actor, Point coordinates) 
-            throws MapControlException { 
+            throws MapControlExceptions { 
       
         Map map = SecretsOfTheSea.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -46,7 +46,7 @@ public class MapControl {
         if (newRow < 0 || newRow >= map.getNoOfRows() ||
             newColumn < 0 || newColumn >= map.getNoOfColumns()) {
             
-            throw new MapControlException("Can not move actor to location"
+            throw new MapControlExceptions("Can not move actor to location"
                         + coordinates.x + ", " + coordinates.y
                         + "because that location is outside"
                         + "the bounds of the map.");
@@ -57,7 +57,7 @@ public class MapControl {
     
     
      public static void moveActorToStartingLocation(Map map) 
-            throws MapControlException { 
+            throws MapControlExceptions { 
       
         Actor[] actors = Actor.values();
         // for every actor

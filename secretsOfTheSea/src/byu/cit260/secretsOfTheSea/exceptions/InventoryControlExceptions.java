@@ -9,26 +9,27 @@ package byu.cit260.secretsOfTheSea.exceptions;
  *
  * @author jacieames
  */
-public class MapControlException extends Exception {
+public class InventoryControlExceptions extends Exception {
 
-    public MapControlException() {
+    public InventoryControlExceptions() {
     }
 
-    public MapControlException(String message) {
+    public InventoryControlExceptions(String message) {
         super(message);
     }
 
-    public MapControlException(String message, Throwable cause) {
+    public InventoryControlExceptions(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MapControlException(Throwable cause) {
+    public InventoryControlExceptions(Throwable cause) {
         super(cause);
     }
 
-    public MapControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public InventoryControlExceptions(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+    
     
     
     
