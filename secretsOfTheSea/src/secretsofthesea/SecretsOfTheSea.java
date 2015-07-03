@@ -1,4 +1,3 @@
-
 package secretsofthesea;
 
 //import byu.cit260.secretsOfTheSea.model.Actor;
@@ -49,7 +48,7 @@ public class SecretsOfTheSea {
     //private static Player player = null;
     
     
-    
+    /*
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
         try {
@@ -64,7 +63,7 @@ public class SecretsOfTheSea {
         }
         
     }
-    
+    */
     
 
     public static Game getCurrentGame() {
