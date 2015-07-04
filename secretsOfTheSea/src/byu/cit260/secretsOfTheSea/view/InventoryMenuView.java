@@ -16,9 +16,9 @@ public class InventoryMenuView {
             + "\n*--------------------------------------*"
             + "\n* Inventory Menu                       *"
             + "\n*--------------------------------------*"
-            + "\nW - How Much Water Needed "
-            + "\nF - How Much Food Needed"
-            + "\nA - How Much Ammunition Needed"
+            + "\nW - Calculate How Much Water Needed "
+            + "\nF - Calculate How Much Food Needed"
+            + "\nA - Calculate How Much Ammunition Needed"
             + "\nE - Exit"
             + "\n---------------------------------------";     
     
@@ -72,7 +72,7 @@ public class InventoryMenuView {
                     this.waterNeeded();
                     break;
             case 'F':
-                    this.qtyOfFood();
+                    this.foodNeeded();
                     break;
             case 'A':
                     this.qtyOfMunitions();
@@ -91,9 +91,9 @@ public class InventoryMenuView {
         startWaterView.startProgram();   
     }
 
-    private void qtyOfFood() {
+    private void foodNeeded() {
         //create ObtainFoodView and start the program
-        ObtainFoodView startFoodView = new ObtainFoodView();
+        FoodNeededView startFoodView = new FoodNeededView();
         startFoodView.startProgram();     
     }
     

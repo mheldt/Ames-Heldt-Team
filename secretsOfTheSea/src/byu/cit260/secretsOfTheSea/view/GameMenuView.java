@@ -19,11 +19,7 @@ public class GameMenuView {
             + "\n|----------------------------         |"
             + "\nM - Move to a New Location "
             + "\nM - How to Move"
-            + "\nO - Explore Location"
             + "\nI - View Inventory"
-            + "\nW - Work on the Ship"
-            + "\nV - View Ship Status"
-            + "\nR - Exchange resources"
             + "\nL - Launch the ship"
             + "\nD - Dock the ship"
             + "\nE - Main Menu"
@@ -78,24 +74,11 @@ public class GameMenuView {
             case 'M':
                     this.howToMove();
                     break;
-            case 'O':
-                    this.exploreLocation();
-                    break;
+           
             case 'I':
                     this.viewInventory();
                     break;
 
-            case 'W':
-                    this.workOnShip();
-                    break;
-
-            case 'V':
-                    this.viewShipStatus();
-                    break;
-
-            case 'R':
-                    this.exchangeResources();
-                    break;
 
             case 'L':
                     this.launchShip();
@@ -123,10 +106,7 @@ public class GameMenuView {
     private void howToMove() {
         System.out.println("*** How To Move Function Called ***");
     }
-
-    private void exploreLocation() {
-        System.out.println("*** Explore Location Function Called ***");   
-    }     
+  
 
     private void viewInventory() { 
         //System.out.println("*** View Inventory Function Called ***");
@@ -138,17 +118,6 @@ public class GameMenuView {
         inventoryMenu.displayMenu();   
     }
 
-    private void workOnShip() {
-        System.out.println("*** Work on Ship Function Called ***");
-    }
-
-    private void viewShipStatus() {
-        System.out.println("*** View Ship Status Function Called ***");
-    }
-
-    private void exchangeResources() {
-        System.out.println("*** Exchange Resources Function Called ***");
-    }
 
     private void launchShip() {
         System.out.println("*** Launch Ship Function Called ***");
