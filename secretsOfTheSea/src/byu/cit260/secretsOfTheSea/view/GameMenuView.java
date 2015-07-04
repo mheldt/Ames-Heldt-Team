@@ -1,4 +1,3 @@
-
 package byu.cit260.secretsOfTheSea.view;
 
 //import byu.cit260.secretsOfTheSea.control.GameControl;
@@ -170,3 +169,13 @@ public class GameMenuView {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+
+  
+    
+    
+    
+    
+    
+    
+    
+ 

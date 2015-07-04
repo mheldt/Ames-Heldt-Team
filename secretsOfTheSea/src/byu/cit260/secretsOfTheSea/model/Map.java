@@ -14,14 +14,6 @@ import java.util.Objects;
  */
 public class Map implements Serializable{
 
-    public int getNoOfColumns() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getNoOfRows() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 // Blocking for testing purposes - Part of weeks assignment
 /**
     

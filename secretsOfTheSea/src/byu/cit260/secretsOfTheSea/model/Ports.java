@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author MarkH
  */
-public class Ports implements Serializable{
+public class Ports {
     
     // class instance variables
     private String portCountry;

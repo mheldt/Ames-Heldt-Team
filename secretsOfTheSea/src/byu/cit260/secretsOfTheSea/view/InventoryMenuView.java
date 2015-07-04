@@ -1,7 +1,7 @@
 package byu.cit260.secretsOfTheSea.view;
 
-import byu.cit260.secretsOfTheSea.control.GameControl;
-import byu.cit260.secretsOfTheSea.control.InventoryControl;
+//import byu.cit260.secretsOfTheSea.control.GameControl;
+//import byu.cit260.secretsOfTheSea.control.InventoryControl;
 import byu.cit260.secretsOfTheSea.model.Player;
 import java.util.Scanner;
 
@@ -86,38 +86,30 @@ public class InventoryMenuView {
     }
 
     private void waterNeeded() {
-        System.out.println("*** Calculate Amount of Water Function Called ***");
+        //create ObtainFoodView and start the program
+        WaterNeededView startWaterView = new WaterNeededView();
+        startWaterView.startProgram();   
     }
 
     private void qtyOfFood() {
-        
         //create ObtainFoodView and start the program
         ObtainFoodView startFoodView = new ObtainFoodView();
-        startFoodView.startProgram();   
-        
+        startFoodView.startProgram();     
     }
+    
     private void qtyOfMunitions() {
-         
         //create QtyOfMunitionsView and start the program
         QtyOfMunitionsView startMunitionsView = new QtyOfMunitionsView();
-        startMunitionsView.startProgram();   
-        
+        startMunitionsView.startProgram();    
     }
 
     private Player SecretsOfTheSea() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    //void displayMenu() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
     void display() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
-    //private void startNewGame() 
-    //    GameControl.createGameMenu(SecretsOfTheSea());
-    //    GameMenuView gameMenu = new GameMenuView();
-    //    gameMenu.display();
-    //}
+    

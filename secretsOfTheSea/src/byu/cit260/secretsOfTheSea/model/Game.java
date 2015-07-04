@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author jacieames
  */
-public class Game implements Serializable{
+public class Game {
     
     private double totalTime;
     private Ships ship;
@@ -77,11 +77,13 @@ public class Game implements Serializable{
  
     
 
+    
     @Override
     public String toString() {
         return "Game{" + "totalTime=" + totalTime + ", noOfPlayers=" + noOfPlayers + '}';
     }
 
+ 
     @Override
     public int hashCode() {
         int hash = 3;
@@ -90,6 +92,7 @@ public class Game implements Serializable{
         return hash;
     }
 
+   
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -102,18 +105,16 @@ public class Game implements Serializable{
         if (!Objects.equals(this.totalTime, other.totalTime)) {
             return false;
         }
-        if (!Objects.equals(this.noOfPlayers, other.noOfPlayers)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.noOfPlayers, other.noOfPlayers);
     }
 
     public void setShips(Ships ships) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Map getMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

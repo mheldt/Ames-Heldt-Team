@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author jacieames
  */
-public enum Actor implements Serializable{
+public enum Actor {
     
     Jacie("Team Member 1"),
     Mark("Team Member 2");
@@ -43,15 +43,5 @@ public enum Actor implements Serializable{
         return coordinates;
     }
 
-    
-
-    
-
-    
-            
-    
-    
-            
-    
-    
+   
 }

@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author MarkH
  */
-public class Food implements Serializable{
+public class Food {
    
     // class instance variables
     private String foodType;

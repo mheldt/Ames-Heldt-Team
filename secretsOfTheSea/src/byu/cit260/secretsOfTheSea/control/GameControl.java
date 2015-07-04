@@ -1,4 +1,3 @@
-
 package byu.cit260.secretsOfTheSea.control;
 
 import byu.cit260.secretsOfTheSea.model.Game;
@@ -6,8 +5,8 @@ import byu.cit260.secretsOfTheSea.model.Game;
 import byu.cit260.secretsOfTheSea.model.Map;
 import byu.cit260.secretsOfTheSea.model.Player;
 import byu.cit260.secretsOfTheSea.model.Ships;
-import java.util.HashSet;
-import java.util.Set;
+//import java.util.HashSet;
+//import java.util.Set;
 import secretsofthesea.SecretsOfTheSea;
 
 /**
@@ -16,7 +15,7 @@ import secretsofthesea.SecretsOfTheSea;
  */
 public class GameControl {
  
-    
+    /**
     public static void createNewGame(Player player) {
         
         Game game  = new Game(); // create new game
@@ -33,16 +32,17 @@ public class GameControl {
         //Map map = MapControl.createMap(); // create and initialize the map
         //MapControl.moveActorToStartingLocation(map);  
     }
-    
+     * @param SecretsOfTheSea
+    **/
 
     public static void createHelpMenu(Player SecretsOfTheSea) {
         System.out.println("\n*** createHelpMenu stub function called ***");
     }
 
 
-    //public static void createNewGame(Player SecretsOfTheSea) {
-    //    System.out.println("\n*** createGameMenu stub function called ***");
-    //}
+    public static void createNewGame(Player SecretsOfTheSea) {
+        System.out.println("\n*** createGameMenu stub function called ***");
+    }
     
     
     public static void createInventoryMenu(Player SecretsOfTheSea) {
@@ -57,8 +57,8 @@ public class GameControl {
        
        
     // New section of the Weeks lesson we did - taking out for testing
-        
-    /*
+    /**    
+    
     public static InventoryItem[] createInventoryMenu() {
 
         // create array(list) of inventory items
@@ -86,6 +86,6 @@ public class GameControl {
         munitions.setRequiredAmt(Double.MIN_NORMAL);
         inventory[Item.munitions.ordinal()] = munitions;
     }   
-    */
+    **/
           
 }

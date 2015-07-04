@@ -2,6 +2,7 @@
 package byu.cit260.secretsOfTheSea.view;
 
 import byu.cit260.secretsOfTheSea.control.ProgramControl;
+//import byu.cit260.secretsOfTheSea.exceptions.ProgramControlExceptions;
 import byu.cit260.secretsOfTheSea.model.Player;
 import java.util.Scanner;
 
@@ -11,9 +12,6 @@ import java.util.Scanner;
  */
 public class StartProgramView {
      
-    public StartProgramView() {   }
-   
-    
     public void startProgram() {
         
         //BEGIN
@@ -22,6 +20,7 @@ public class StartProgramView {
             this.displayBanner();
             
             //Get the players name
+            //String playersName = this.getPlayersName();
             String playersName = this.getPlayersName();
             
             //Create a new player
@@ -42,11 +41,10 @@ public class StartProgramView {
             System.out.println("\tThank You For Playing");
             System.out.println("\tWe hope you had fun!");
             System.out.println("====================");
-            
-        
-        }
+              
+    }
 
-    private void displayBanner() {
+    public void displayBanner() {
         
         System.out.println("\n\n*************");
         
@@ -112,11 +110,5 @@ public class StartProgramView {
         System.out.println("\tWe hope you have fun!");
         System.out.println("====================");
         
-    }
-
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
- 
-    
+    }  
 }

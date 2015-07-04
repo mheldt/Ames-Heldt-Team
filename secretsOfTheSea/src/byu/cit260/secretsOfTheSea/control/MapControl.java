@@ -5,12 +5,8 @@
  */
 package byu.cit260.secretsOfTheSea.control;
 
-import byu.cit260.secretsOfTheSea.exceptions.MapControlExceptions;
-import byu.cit260.secretsOfTheSea.model.Actor;
 import byu.cit260.secretsOfTheSea.model.Map;
-import java.awt.Point;
 import javafx.scene.Scene;
-import secretsofthesea.SecretsOfTheSea;
 
 /**
  *
@@ -19,9 +15,9 @@ import secretsofthesea.SecretsOfTheSea;
 public class MapControl {
 
 // Blocking for testing purposes - Part of weeks assignment
+/**
 
-
-    public MapControl() {
+    public static Map createMap() {
         
         // create the map
         //Map map = new Map(20, 20);
@@ -32,50 +28,14 @@ public class MapControl {
         //assign the different scenes to locations in the map
         //GameControl.assignScenesToLocations(map, scenes);
         
-        //return map;
-        //return null;
-    }
-
-    public static void moveActorToLocation(Actor actor, Point coordinates) 
-            throws MapControlExceptions { 
-      
-        Map map = SecretsOfTheSea.getCurrentGame().getMap();
-        int newRow = coordinates.x-1;
-        int newColumn = coordinates.y-1;
-        
-        if (newRow < 0 || newRow >= map.getNoOfRows() ||
-            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
-            
-            throw new MapControlExceptions("Can not move actor to location"
-                        + coordinates.x + ", " + coordinates.y
-                        + "because that location is outside"
-                        + "the bounds of the map.");
-        }
+        return map;
         
     }
 
-    
-    
-     public static void moveActorToStartingLocation(Map map) 
-            throws MapControlExceptions { 
-      
-        Actor[] actors = Actor.values();
-        // for every actor
-        for (Actor actor : actors) {
-            Point coordinates = actor.getCoordinates();
-            MapControl.moveActorToLocation(actor, coordinates);
-        
-        
-        }
-        
+    static void moveActorToStartingLocation(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
-    
-    
-    
+
     private static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -83,6 +43,6 @@ public class MapControl {
     private static Scene[] createScenes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+**/
     
 }

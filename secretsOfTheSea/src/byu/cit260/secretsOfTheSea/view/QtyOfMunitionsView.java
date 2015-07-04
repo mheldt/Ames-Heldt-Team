@@ -1,10 +1,9 @@
 
 package byu.cit260.secretsOfTheSea.view;
 
-import byu.cit260.secretsOfTheSea.control.ProgramControl;
-import byu.cit260.secretsOfTheSea.model.Food;
-import byu.cit260.secretsOfTheSea.model.Player;
+import byu.cit260.secretsOfTheSea.exceptions.InventoryControlException;
 import java.util.Scanner;
+
 /**
  *
  * @author MarkH
@@ -20,8 +19,12 @@ public class QtyOfMunitionsView {
             //Display Banner Screen
             this.displayBanner();
             
+        try {
             //Get the Total People & Calc Results
             this.getTotalPeople();
+        } catch (InventoryControlException ex) {
+            //Logger.getLogger(QtyOfMunitionsView.class.getName()).log(Level.SEVERE, null, ex);
+        }
       
         //END   
             
@@ -32,7 +35,7 @@ public class QtyOfMunitionsView {
             System.out.println("\tChoosing Option Again");
             //System.out.println("====================");
         
-        }
+    }
 
     private void displayBanner() {
         
@@ -43,9 +46,10 @@ public class QtyOfMunitionsView {
     
     }
 
-    public boolean getTotalPeople() {
+    public boolean getTotalPeople() 
+        throws InventoryControlException {  // new throws line { was there
+        
         boolean valid = false; //indicates if amount needed has been retrieved
-
         int bulletsPerGun = 10;        
         int gunPowderShotsPerKeg = 100;
    
@@ -53,9 +57,14 @@ public class QtyOfMunitionsView {
         byte totalPeople;
 
         // Enter total people on trip
-        System.out.print("Enter the total number of people for the voyage: ");
+        System.out.print("Enter between 10-30 total people for the voyage: ");
         totalPeople = scnr.nextByte();
-
+        
+        //Error Checking totalPerople
+        if (totalPeople < 10 || totalPeople > 30)  {
+            throw new InventoryControlException(" "); 
+        }
+	
         // Calculate the ammunition needed
         int totGuns = totalPeople * 2;
         int totBullets = bulletsPerGun * totGuns;

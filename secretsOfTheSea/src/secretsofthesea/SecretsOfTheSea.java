@@ -33,7 +33,7 @@ import byu.cit260.secretsOfTheSea.view.StartProgramView;
 
 /**
  *
- * @author jacieames & markheldt
+ * @author jacieames
  */
 
 
@@ -47,24 +47,12 @@ public class SecretsOfTheSea {
     private static final Player player = null;
     //private static Player player = null;
     
-    
-    /*
-    public static void main(String[] args) {
-        StartProgramView startProgramView = new StartProgramView();
-        try {
-        //create StartProgramView and start the program
-        startProgramView.display();   
-    
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            //te.printStackTrace();
-            startProgramView.display();
-            
-        }
-        
-    }
-    */
-    
+       
+    public static void main(String[] args) { 
+        StartProgramView startProgramView = new StartProgramView();   
+        startProgramView.startProgram();
+    }   
+ 
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -102,11 +90,6 @@ public class SecretsOfTheSea {
     }
 
 
-    
-    
-
-    
-        
     Player playerOne = new Player();
     Artifacts artifactsOne = new Artifacts();
     Clipper clipperOne = new Clipper();
