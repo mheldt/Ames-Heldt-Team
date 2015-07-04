@@ -60,7 +60,7 @@ public class QtyOfMunitionsView {
         System.out.print("Enter between 10-30 total people for the voyage: ");
         totalPeople = scnr.nextByte();
         
-        //Error Checking totalPerople
+        //Error Checking totalPeople
         if (totalPeople < 10 || totalPeople > 30)  {
             throw new InventoryControlException(" "); 
         }

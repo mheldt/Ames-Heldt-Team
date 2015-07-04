@@ -80,8 +80,8 @@ public class FoodNeededView {
         
         
     // Calculate & Display the food needed
-    double mealsPerPersonPerDay = 3;
-    double totFood = totalPeople * daysAtSea * mealsPerPersonPerDay;
+    double mealsPerDay = 3;
+    double totalMeals = totalPeople * daysAtSea * mealsPerDay;
  
     // Results of the ammunition needed
 
@@ -89,7 +89,7 @@ public class FoodNeededView {
     System.out.println("\t  ");
     System.out.println("\tTotal People            = " + totalPeople);
     System.out.println("\tTotal Days at Sea       = " + daysAtSea);
-    System.out.println("\tTotal Meals             = " + totFood);
+    System.out.println("\tTotal Meals             = " + totalMeals);
 
 
     return false;  

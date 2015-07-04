@@ -93,7 +93,7 @@ public class ObtainFoodView {
 
     private String getFoodNeeded() {
         return null;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     private void displayFoodNeeded(Food foodb) {
