@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @author jacieames
  */
 public class StartProgramView {
+    public Object startProgramView;
      
     public void startProgram() {
         

@@ -1,6 +1,9 @@
 package byu.cit260.secretsOfTheSea.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import secretsofthesea.SecretsOfTheSea;
 
 /**
  *
@@ -8,26 +11,16 @@ import java.util.Scanner;
  */
 public class View implements ViewInterface {
 
-    //private String promptMessage;
-    //public View(String promptMessage) {
-    //    this.promptMessage = promptMessage;  
-    //}
-    /*
     
-       
-    public void display() {
-        String myInput = "";
-        boolean done = false;
-        do { 
-            System.out.println(this.promptMessage); //display prompt message
-            myInput = this.getInput(); //get value end user entered
-            done = this.doAction(myInput);  // do action based on value entered                
-        }    
-        while (!done); 
+    private String message;
+    protected final BufferedReader keyboard = SecretsOfTheSea.getInFile();
+    protected final PrintWriter console = SecretsOfTheSea.getOutFile();
+    
+    public View() {
+        
     }
+   
     
-    */
-    // THIS IS OUR ORIGINAL CODE
     
     public void displayMenu() {
         char selection = ' ';
@@ -42,24 +35,23 @@ public class View implements ViewInterface {
         while (selection != 'E'); //a selection is not "Exit"  
     }  
            
-    
-    
-    /*
+
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //keyboard input stream
+        
         boolean valid = false; //indicates if the command has been retrieved
-        String myInput = null;
+        String selection = null;
   
-        while(!valid) { //while a valid command hasn't been retrieved
+    //while a valid command hasn't been retrieved
+    while(!valid) { 
 
             //get the value from the keyboard
-            myInput = keyboard.nextLine();
-            myInput = myInput.trim();
+            selection = this.keyboard.readLine();
+            selection = selection.trim();
             
             //prompt for the player's selection
             System.out.println("Please make a selection on the menu: ");
 
-            if (myInput.length() < 1) {
+            if (selection.length() < 1) { // blank value entered
 
                 System.out.println("You must enter the menu letter");
                 continue; // and repeat again
@@ -67,51 +59,11 @@ public class View implements ViewInterface {
             break; // out of the (exit) the repetition
         }
 
-        return myInput; // return the selection
-    }
-    */
-    
-    // THIS IS OUR ORIGINAL CODE 
-    
-    public String getInput() {
-        boolean valid = false; //indicates if the command has be retrieved
-        String selection = null;
-        Scanner keyboard = new Scanner(System.in); //keyboard input stream
-
-        while(!valid) { //while a valid command hasn't been retrieved
-
-            // prompt for the player's selection
-            System.out.println("Please make a selection on the menu");
-
-            //get the selection from the keyboard and trim off the blanks
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-
-            //if name is invalid
-            if (selection.length() > 1) {
-
-                System.out.println("Invalid character");
-                continue; // and repeat again
-            }
-
-
-            break; // out of the (exit) the repetition
-        }
-
         return selection; // return the selection
     }
-
     
-    /*
     
-    public String getPromptMessage() {
-        return promptMessage;
-    }
-
-    public void setPromptMessage(String Message) {
-        this.promptMessage = Message;
-    }
-    */
+    
 
     private void doAction(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
