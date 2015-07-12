@@ -19,6 +19,7 @@ public class MainMenuView {
             + "\nG - Start existing game"
             + "\nH - Help menu"
             + "\nS - Save game"
+            + "\nP - Print a report"
             + "\nE - Exit"
             + "\n---------------------------------------";
     private Object console;
@@ -80,6 +81,9 @@ public class MainMenuView {
                     break;
             case 'S':
                     this.saveGame(); // save the current game
+                    break;
+            case 'P':
+                    this.printReport(); // save the current game
                     break;
             case 'E':
                     this.endGame();
@@ -164,6 +168,10 @@ public class MainMenuView {
         //private void displayWelcomeMessage(Player player) {
         
         
+    }
+
+    private void printReport() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public class keyboard {
