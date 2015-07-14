@@ -17,11 +17,9 @@ public class GameMenuView {
             + "\n---------------------------------------"
             + "\n| Game Menu                           |"
             + "\n|----------------------------         |"
-            + "\nM - Move to a New Location "
-            + "\nM - How to Move"
-            + "\nI - View Inventory"
+            + "\nI - Get Inventory"
             + "\nL - Launch the ship"
-            + "\nD - Dock the ship"
+            + "\nM - Move to a New Location "
             + "\nE - Main Menu"
             + "\n---------------------------------------";
             
@@ -71,23 +69,14 @@ public class GameMenuView {
             case 'G':
                     this.goalOfGame();
                     break;
-            case 'M':
-                    this.howToMove();
-                    break;
            
             case 'I':
                     this.viewInventory();
                     break;
 
-
             case 'L':
                     this.launchShip();
                     break;
-
-            case 'D':
-                    this.dockShip();
-                    break;
-
 
             case 'E':
                     this.backToMain();
@@ -117,7 +106,6 @@ public class GameMenuView {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
         inventoryMenu.displayMenu();   
     }
-
 
     private void launchShip() {
         System.out.println("*** Launch Ship Function Called ***");
