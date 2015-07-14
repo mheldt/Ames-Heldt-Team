@@ -30,13 +30,6 @@ import byu.cit260.secretsOfTheSea.model.ShipTypeScene;
 import byu.cit260.secretsOfTheSea.model.Statues;
 import byu.cit260.secretsOfTheSea.model.Tokens;
 import byu.cit260.secretsOfTheSea.view.StartProgramView;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import sun.util.logging.PlatformLogger;
 
 /**
  *
@@ -52,67 +45,15 @@ public class SecretsOfTheSea {
     
     private static Game currentGame = null;
     private static final Player player = null;
- 
-    
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
-    
-    private static PrintWriter logFile = null;
+    //private static Player player = null;
     
        
     public static void main(String[] args) { 
-        
-        try {
-            
-            // open character stream files for end user input and output
-            SecretsOfTheSea.inFile = 
-                    new BufferedReader(new InputStreamReader(System.in));
-                    
-            SecretsOfTheSea.outFile = new PrintWriter(System.out, true);
-            
-            //open log file
-            String filePath = "log.txt";
-            SecretsOfTheSea.logFile = newPrintWriter(filePath);
-            
-
-            // create StartProgramView and start the program
         StartProgramView startProgramView = new StartProgramView();   
-        startProgramView.startProgramView.display();
-        return;
-        
-    }   catch (Throwable e) {
-        
-        System.out.println("Exception: " + e.toString() +
-                           "\nCause: " + e.getCause() +
-                           "\nMessage: " + e.getMessage());
-        
-        e.printStackTrace();;
-    }
-        
-    finally {
-        try {
-            if (SecretsOfTheSea.inFile != null)
-            SecretsOfTheSea.inFile.close();
-            
-            if (SecretsOfTheSea.inFile != null)
-            SecretsOfTheSea.outFile.close();
-            
-            if (SecretsOfTheSea.logFile != null)
-                SecretsOfTheSea.logFile.close();
-
-        }    catch (IOException ex) {
-                System.out.println("Error closing files");
-                return;
-            }
-        
-        }
+        startProgramView.startProgram();
+    }   
  
-    }
 
-        
-        
-        
-        
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -123,10 +64,6 @@ public class SecretsOfTheSea {
 
     public static Game getPlayerOne() {
         return currentGame;
-    }
-
-    private static PrintWriter newPrintWriter(String filePath) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public void setPlayerOne(Player playerOne) {
@@ -151,33 +88,6 @@ public class SecretsOfTheSea {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return currentGame;
     }
-    
-    
-    public static PrintWriter getOutFile() {
-        return outFile;
-    }
-    
-    public static void setOutFile(PrintWriter outFile) {
-        SecretsOfTheSea.outFile = outFile;
-    }
-    
-    public static BufferedReader getInFile() {
-        return inFile;
-    }
-    
-    public static void setInFile(BufferedReader inFile) {
-        SecretsOfTheSea.inFile = inFile;
-    }
-    
-    
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-    
-    public static void setLogFile(PrintWriter logFile) {
-        SecretsOfTheSea.logFile = logFile;
-    }
-    
 
 
     Player playerOne = new Player();

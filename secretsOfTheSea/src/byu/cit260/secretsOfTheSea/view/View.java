@@ -12,9 +12,9 @@ import secretsofthesea.SecretsOfTheSea;
 public class View implements ViewInterface {
 
     
-    private String message;
-    protected final BufferedReader keyboard = SecretsOfTheSea.getInFile();
-    protected final PrintWriter console = SecretsOfTheSea.getOutFile();
+//    private String message;
+//    protected final BufferedReader keyboard = SecretsOfTheSea.getInFile();
+//    protected final PrintWriter console = SecretsOfTheSea.getOutFile();
     
     public View() {
         
@@ -45,7 +45,7 @@ public class View implements ViewInterface {
     while(!valid) { 
 
             //get the value from the keyboard
-            selection = this.keyboard.readLine();
+    //        selection = this.keyboard.readLine();
             selection = selection.trim();
             
             //prompt for the player's selection

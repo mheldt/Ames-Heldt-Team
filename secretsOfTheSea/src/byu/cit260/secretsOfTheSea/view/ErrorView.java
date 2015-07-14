@@ -11,7 +11,7 @@ import secretsofthesea.SecretsOfTheSea;
 /**
  *
  * @author jacieames
- */
+
 public class ErrorView {
     
     private static final PrintWriter errorFile = SecretsOfTheSea.getOutFile();
@@ -21,7 +21,7 @@ public class ErrorView {
         
         errorFile.println{
                     
-                "--------------------------------------------"
+               "--------------------------------------------"
               + "\n - ERROR - " + errorMessage
               + "\n------------------------------------------");
                 
@@ -37,3 +37,4 @@ public class ErrorView {
     
     
 }
+ */
