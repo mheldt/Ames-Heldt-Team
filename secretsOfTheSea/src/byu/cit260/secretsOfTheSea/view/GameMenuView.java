@@ -89,7 +89,10 @@ public class GameMenuView {
     }
 
     private void goalOfGame() {
-        System.out.println("*** Goal Of Game Function Called ***");
+        // go to Goal of Game menu
+        GoalOfGameView goalMenu = new GoalOfGameView() { };
+        goalMenu.displayMenu();
+        
     }
 
     private void howToMove() {
@@ -108,7 +111,9 @@ public class GameMenuView {
     }
 
     private void launchShip() {
-        System.out.println("*** Launch Ship Function Called ***");
+        LaunchShipView shipMenu = new LaunchShipView() { };
+        shipMenu.displayMenu();
+        
     }
 
     private void dockShip() {

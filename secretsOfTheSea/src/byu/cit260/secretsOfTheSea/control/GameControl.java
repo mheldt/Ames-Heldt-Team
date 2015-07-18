@@ -36,26 +36,21 @@ public class GameControl {
     **/
 
     public static void createHelpMenu(Player SecretsOfTheSea) {
-        System.out.println("\n*** createHelpMenu stub function called ***");
+        //System.out.println("\n*** createHelpMenu stub function called ***");
     }
 
 
     public static void createNewGame(Player SecretsOfTheSea) {
-        System.out.println("\n*** createGameMenu stub function called ***");
+        //System.out.println("\n*** createGameMenu stub function called ***");
     }
     
     
     public static void createInventoryMenu(Player SecretsOfTheSea) {
-        System.out.println("\n*** createInventoryMenu stub function called ***");
+        //System.out.println("\n*** createInventoryMenu stub function called ***");
     }
 
     public static void createGameMenu(Player SecretsOfTheSea) {
-        System.out.println("\n*** createGameMenu stub function called ***");
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //System.out.println("\n*** createGameMenu stub function called ***");
+        
     }
-
-       
-       
-    
-          
 }
