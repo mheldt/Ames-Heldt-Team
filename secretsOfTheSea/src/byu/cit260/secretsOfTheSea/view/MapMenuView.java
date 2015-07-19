@@ -1,26 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package byu.cit260.secretsOfTheSea.view;
 
-//import byu.cit260.secretsOfTheSea.control.GameControl;
 import byu.cit260.secretsOfTheSea.control.InventoryControl;
+//import byu.cit260.secretsOfTheSea.exceptions.MapControlException;
 import byu.cit260.secretsOfTheSea.model.Player;
 import java.util.Scanner;
 
 /**
  *
- * @author jacieames
+ * @author MarkH
  */
-
-public class GameMenuView {
+public class MapMenuView {
     
     private final String MENU = "\n"
             
             + "\n---------------------------------------"
-            + "\n| Game Menu                           |"
-            + "\n|----------------------------         |"
-            + "\nI - Get Inventory"
-            + "\nL - Launch the ship"
-            + "\nM - Move to a New Location "
-            + "\nE - Main Menu"
+            + "\n| Destinations to Choose               |"
+            + "\n|--------------------------------------"
+            + "\nI - Invisible Island"
+            + "\nW - Edge of the World"
+            + "\nE - Exit "
+            + "\n "
             + "\n---------------------------------------";
             
     
@@ -44,7 +48,7 @@ public class GameMenuView {
         while(!valid) { //while a valid command hasn't been retrieved
 
             // prompt for the player's selection
-            System.out.println("Please make a selection on the menu");
+            System.out.println("Choose Your Destination");
 
             //get the selection from the keyboard and trim off the blanks
             selection = keyboard.nextLine();
@@ -66,25 +70,18 @@ public class GameMenuView {
 
     private void doAction(char selection) {
         switch (selection) {
-            case 'G':
-                    this.goalOfGame();
+            case 'I':
+                    this.invisibleIsland();
                     break;
            
-            case 'I':
-                    this.viewInventory();
-                    break;
-
-            case 'L':
-                    this.launchShip();
-                    break;
-                
-            case 'M':
-                    this.moveTheShip();
+            case 'W':
+                    this.edgeWorld();
                     break;
 
             case 'E':
-                    this.backToMain();
-                    break;
+                    //this.backToMain();
+                    //break;
+                return;
             default:
                     System.out.println("\n*** Invalid selection *** Try again");
                     break;
@@ -92,38 +89,17 @@ public class GameMenuView {
             
     }
 
-    private void goalOfGame() {
+    private void invisibleIsland() {
         // go to Goal of Game menu
-        GoalOfGameView goalMenu = new GoalOfGameView() { };
-        goalMenu.displayMenu();
-        
+        InvisibleIslandView islandMenu = new InvisibleIslandView();
+        islandMenu.startProgram();
     }
 
-    private void moveTheShip() {
-        MapMenuView moveMenu = new MapMenuView();
-        moveMenu.displayMenu();
+    private void edgeWorld() {
+        EdgeOfTheWorld edgeMenu = new EdgeOfTheWorld();
+        edgeMenu.startProgram();
     }
-  
-
-    private void viewInventory() { 
-        //System.out.println("*** View Inventory Function Called ***");
-        // display Inventory menu
-        InventoryControl.createInventoryMenu(SecretsOfTheSea());
-        
-        //display the inventory menu
-        InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.displayMenu();   
-    }
-
-    private void launchShip() {
-        LaunchShipView shipMenu = new LaunchShipView() { };
-        shipMenu.displayMenu();
-        
-    }
-
-    private void dockShip() {
-        System.out.println("*** Dock Ship Function Called ***");
-    }
+ 
     
     private void backToMain() {
         // back to main menu
@@ -135,14 +111,7 @@ public class GameMenuView {
         return null;
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
 
-  
-    
-    
-    
-    
-    
-    
     
  
+}
